@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth & Performance Marketing Specialist | Delhi NCR & Bangalore</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#0d0f17',
+                        cardBg: '#16192b',
+                        cardBorder: '#232845',
+                        neonMint: '#10b981',
+                        glowingCyan: '#06b6d4',
+                        hotPink: '#ec4899',
+                        sakuraPink: '#f472b6'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0d0f17;
+            color: #f3f4f6;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Card Style */
+        .glass-card {
+            background: rgba(22, 25, 43, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(16, 185, 129, 0.3);
+            box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.15);
+        }
+
+        .glass-nav {
+            background: rgba(13, 15, 23, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0f17;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #232845;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #10b981;
+        }
+
+        /* Text Gradients */
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981 0%, #06b6d4 50%, #f472b6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Hero Sakura Canvas Overlay */
+        #sakura-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Pulse glow animation */
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+        .animate-pulse-glow {
+            animation: pulseGlow 4s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="relative">
+
+    <!-- Sakua Canvas Overlay for Hero -->
+    <canvas id="sakura-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-extrabold tracking-tight flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-neonMint inline-block animate-ping"></span>
+                <span>ROAS<span class="text-neonMint">Engine</span></span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#stats" class="hover:text-neonMint transition-colors">Impact & KPIs</a>
+                <a href="#case-studies" class="hover:text-neonMint transition-colors">Case Studies</a>
+                <a href="#game" class="hover:text-neonMint transition-colors text-sakuraPink flex items-center gap-1.5"><i class="fa-solid font-bold fa-gamepad"></i> Marketing Snake</a>
+                <a href="#skills" class="hover:text-neonMint transition-colors">Stack & Tools</a>
+                <a href="#experience" class="hover:text-neonMint transition-colors">Experience</a>
+                <a href="#calculator" class="hover:text-neonMint transition-colors">ROI Simulator</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <button onclick="openHRDrawer()" class="hidden sm:flex items-center gap-2 bg-gradient-to-r from-neonMint to-glowingCyan text-darkBg font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-full hover:shadow-lg hover:shadow-neonMint/20 transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-bolt"></i> HR Fast Pitch
+                </button>
+                <a href="#contact" class="bg-cardBorder text-white text-xs font-semibold px-4 py-2.5 rounded-full border border-gray-700 hover:border-neonMint transition-colors">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden bg-gradient-to-b from-darkBg via-cardBg/40 to-darkBg">
+        <!-- Ambient Glowing Background Bubbles -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-neonMint/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-sakuraPink/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Demographic Targeting Pill -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cardBg/90 border border-sakuraPink/30 text-sakuraPink text-xs font-semibold uppercase tracking-wider mb-8 shadow-sm">
+                <i class="fa-solid fa-location-dot"></i> Targeting Top Agencies in Delhi NCR & Bangalore (HSR / Koramangala / Cyber City)
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-tight max-w-5xl mx-auto mb-6">
+                Performance-Driven <span class="gradient-text">Growth Marketer</span> Scaling D2C & B2B Brands.
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
+                Specialized in architecting high-ROAS paid search & social engines, lowering CAC, and building full-funnel customer acquisition roadmaps for high-growth brands in India.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+                <a href="#case-studies" class="px-8 py-4 rounded-xl bg-neonMint text-darkBg font-bold text-base hover:bg-emerald-400 transition-all shadow-lg shadow-neonMint/20 flex items-center gap-2">
+                    <i class="fa-solid fa-chart-line"></i> View Verified Campaigns
+                </a>
+                <a href="#game" class="px-8 py-4 rounded-xl glass-card border border-sakuraPink/50 text-sakuraPink font-bold text-base hover:bg-sakuraPink/10 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-gamepad"></i> Play Marketing Snake
+                </a>
+                <button onclick="openHRDrawer()" class="px-6 py-4 rounded-xl glass-card border border-gray-700 hover:border-glowingCyan text-gray-200 font-semibold text-base transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-file-user"></i> HR Quick Pitch
+                </button>
+            </div>
+
+            <!-- Top Quantifiable Key Metrics Banner -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                <div class="glass-card p-5 rounded-2xl text-left border-l-4 border-l-neonMint">
+                    <div class="text-xs uppercase tracking-wider text-gray-400 font-semibold mb-1">Ad Spend Managed</div>
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white">₹2.8 Cr+</div>
+                    <div class="text-xs text-neonMint mt-1"><i class="fa-solid fa-arrow-trend-up"></i> Across Google & Meta</div>
+                </div>
+                <div class="glass-card p-5 rounded-2xl text-left border-l-4 border-l-glowingCyan">
+                    <div class="text-xs uppercase tracking-wider text-gray-400 font-semibold mb-1">Avg Blended ROAS</div>
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white">4.35x</div>
+                    <div class="text-xs text-glowingCyan mt-1"><i class="fa-solid fa-check-double"></i> Verified D2C & B2B</div>
+                </div>
+                <div class="glass-card p-5 rounded-2xl text-left border-l-4 border-l-hotPink">
+                    <div class="text-xs uppercase tracking-wider text-gray-400 font-semibold mb-1">Revenue Generated</div>
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white">₹12.4 Cr+</div>
+                    <div class="text-xs text-hotPink mt-1"><i class="fa-solid fa-sack-dollar"></i> Tracked via GA4</div>
+                </div>
+                <div class="glass-card p-5 rounded-2xl text-left border-l-4 border-l-sakuraPink">
+                    <div class="text-xs uppercase tracking-wider text-gray-400 font-semibold mb-1">Avg CAC Reduction</div>
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white">34.8%</div>
+                    <div class="text-xs text-sakuraPink mt-1"><i class="fa-solid fa-bullseye"></i> CRO & Funnel Optimization</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- HR Impact & KPI Stats Bar -->
+    <section id="stats" class="py-16 bg-cardBg/30 border-y border-cardBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-white mb-3">Core Performance Stack at a Glance</h2>
+                <p class="text-gray-400 text-sm">Real execution experience handling multi-channel budgets, scaling ad creative output, and optimizing landing page funnels.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Stat Card 1 -->
+                <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-neonMint/10 text-neonMint flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Paid Search & Shopping</h3>
+                        <p class="text-gray-400 text-xs mb-3">Google Search, Performance Max, Shopping Ads, YouTube Action campaigns.</p>
+                        <div class="text-2xl font-black text-neonMint">₹1.5 Cr Spent</div>
+                        <div class="text-xs text-gray-400 mt-1">High-intent keyword scaling with custom bid strategies</div>
+                    </div>
+                </div>
+
+                <!-- Stat Card 2 -->
+                <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-glowingCyan/10 text-glowingCyan flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-brands fa-meta"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Meta Growth Engine</h3>
+                        <p class="text-gray-400 text-xs mb-3">Advantage+ Shopping, Creative Testing Matrix, UGC Video Ads.</p>
+                        <div class="text-2xl font-black text-glowingCyan">4.6x Peak ROAS</div>
+                        <div class="text-xs text-gray-400 mt-1">Consistently scaling D2C brands past ₹20L/mo spend</div>
+                    </div>
+                </div>
+
+                <!-- Stat Card 3 -->
+                <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-sakuraPink/10 text-sakuraPink flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Analytics & Attribution</h3>
+                        <p class="text-gray-400 text-xs mb-3">GA4 custom events, GTM setup, Server-side tagging & Clarity heatmaps.</p>
+                        <div class="text-2xl font-black text-sakuraPink">100% Tracking Accuracy</div>
+                        <div class="text-xs text-gray-400 mt-1">Zero drop-off server-side CAPI implementation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies & Campaign Deep Dives -->
+    <section id="case-studies" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-neonMint text-xs font-bold uppercase tracking-widest">Verified Work</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Featured Performance Case Studies</h2>
+                </div>
+                <p class="text-gray-400 text-sm max-w-md mt-4 md:mt-0">
+                    Real campaign outcomes solved for Indian D2C and B2B SaaS brands using structured creative testing and funnel CRO.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Case Study 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-cardBorder">
+                    <div class="p-6 bg-gradient-to-r from-emerald-900/30 to-darkBg border-b border-cardBorder">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase bg-neonMint/20 text-neonMint">Delhi NCR D2C Brand</span>
+                            <span class="text-gray-400 text-xs"><i class="fa-solid fa-calendar"></i> 4 Months</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Ethnic Wear D2C Brand Scaling to ₹45L/Month</h3>
+                        <p class="text-xs text-gray-400 mt-1">PMax + Advantage+ Scaling & UGC Video Funnel</p>
+                    </div>
+                    
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div class="space-y-4 mb-6">
+                            <div class="grid grid-cols-2 gap-4 bg-darkBg/60 p-3 rounded-xl">
+                                <div>
+                                    <div class="text-[11px] text-gray-400 uppercase">Monthly Spend</div>
+                                    <div class="text-base font-bold text-white">₹12.5 Lakhs</div>
+                                </div>
+                                <div>
+                                    <div class="text-[11px] text-gray-400 uppercase">ROAS Achieved</div>
+                                    <div class="text-base font-bold text-neonMint">4.82x</div>
+                                </div>
+                                <div>
+                                    <div class="text-[11px] text-gray-400 uppercase">Blended CAC</div>
+                                    <div class="text-base font-bold text-white">₹340 (-38%)</div>
+                                </div>
+                                <div>
+                                    <div class="text-[11px] text-gray-400 uppercase">Total Revenue</div>
+                                    <div class="text-base font-bold text-glowingCyan">₹60.2 Lakhs</div>
+                                </div>
+                            </div>
+
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                <strong class="text-white">Strategy:</strong> Shifted budget to Advantage+ Shopping, implemented automated catalog ads combined with WhatsApp remarketing for abandoned carts.
+                            </p>
+                        </div>
+
+                        <!-- Mini SVG Chart -->
+                        <div class="bg-darkBg/40 p-3 rounded-xl border border-cardBorder">
+                            <div class="text-[10px] text-gray-400 mb-1 font-semibold uppercase">Revenue Growth Trend</div>
+                            <svg class="w-full h-12 text-neonMint" viewBox="0 0 300 50" fill="none">
+                                <path d="M0,45 L50,40 L100,35 L150,20 L200,25 L250,10 L300,2" stroke="currentColor" stroke-width="3" fill="none"/>
+                                <circle cx="300" cy="2" r="4" fill="#10b981"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-cardBorder">
+                    <div class="p-6 bg-gradient-to-r from-cyan-900/30 to-darkBg border-b border-cardBorder">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase bg-glowingCyan/20 text-glowingCyan">Bangalore B2B Tech</span>
+                            <span class="text-gray-400 text-xs"><i class="fa-solid fa-calendar"></i> 6 Months</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">SaaS Lead Gen: Lowering CPL for Enterprise Product</h3>
+                        <p class="text-xs text-gray-400 mt-1">LinkedIn Ads + Google Search Intent Hijack</p>
+                    </div>
+                    
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div class="space-y-4 mb-6">
+                            <div class="grid grid-cols-2 gap-4 bg-darkBg/60 p-3 rounded-xl">
+                                <div>
+                                    <div class="text-[11px] text-gray-400 uppercase">Monthly Spend</div>
+                                    <div class="text-base font-bold text-white">₹8.0 Lakhs</div>
+                                </div>
+                                <div>
+                                    <div class="text-[11px] text-gray-400 uppercase">CPL Reduction</div>
+                                    <div class="text-base font-bold text-glowingCyan">-42%</div>
+                                </div>
+                                <div>
+                                    <div class="text-[11px] text-gray-400 uppercase">SQL Conversion</div>
+                                    <div class="text-base font-bold text-white">28.5%</div>
+                                </div>
+                                <div>
+                                    <div class="text-[11px] text-gray-400 uppercase">Pipeline Generated</div>
+                                    <div class="text-base font-bold text-neonMint">₹1.8 Cr</div>
+                                </div>
+                            </div>
+
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                <strong class="text-white">Strategy:</strong> Redesigned lead magnet landing page, targeted CXOs in Bangalore tech corridor, implemented clear lead scoring on HubSpot.
+                            </p>
+                        </div>
+
+                        <!-- Mini SVG Chart -->
+                        <div class="bg-darkBg/40 p-3 rounded-xl border border-cardBorder">
+                            <div class="text-[10px] text-gray-400 mb-1 font-semibold uppercase">Qualified SQLs / Mo</div>
+                            <svg class="w-full h-12 text-glowingCyan" viewBox="0 0 300 50" fill="none">
+                                <path d="M0,48 L60,38 L120,30 L180,22 L240,12 L300,5" stroke="currentColor" stroke-width="3" fill="none"/>
+                                <circle cx="300" cy="5" r="4" fill="#06b6d4"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-cardBorder">
+                    <div class="p-6 bg-gradient-to-r from-pink-900/30 to-darkBg border-b border-cardBorder">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase bg-sakuraPink/20 text-sakuraPink">E-Commerce Festive Sale</span>
+                            <span class="text-gray-400 text-xs"><i class="fa-solid fa-calendar"></i> Festive Season</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Diwali Mega Sale Engine: 5.2x ROAS Execution</h3>
+                        <p class="text-xs text-gray-400 mt-1">Omnichannel Paid Campaign Scaling</p>
+                    </div>
+                    
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div class="space-y-4 mb-6">
+                            <div class="grid grid-cols-2 gap-4 bg-darkBg/60 p-3 rounded-xl">
+                                <div>
+                                    <div class="text-[11px] text-gray-400 uppercase">Campaign Budget</div>
+                                    <div class="text-base font-bold text-white">₹22.0 Lakhs</div>
+                                </div>
+                                <div>
+                                    <div class="text-[11px] text-gray-400 uppercase">Blended ROAS</div>
+                                    <div class="text-base font-bold text-sakuraPink">5.24x</div>
+                                </div>
+                                <div>
+                                    <div class="text-[11px] text-gray-400 uppercase">New Buyers</div>
+                                    <div class="text-base font-bold text-white">18,400+</div>
+                                </div>
+                                <div>
+                                    <div class="text-[11px] text-gray-400 uppercase">Gross Sales</div>
+                                    <div class="text-base font-bold text-neonMint">₹1.15 Cr</div>
+                                </div>
+                            </div>
+
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                <strong class="text-white">Strategy:</strong> Dynamic creative optimization with targeted festive offers, retargeting warm website traffic within 3-day windows.
+                            </p>
+                        </div>
+
+                        <!-- Mini SVG Chart -->
+                        <div class="bg-darkBg/40 p-3 rounded-xl border border-cardBorder">
+                            <div class="text-[10px] text-gray-400 mb-1 font-semibold uppercase">Daily Sales Spike</div>
+                            <svg class="w-full h-12 text-sakuraPink" viewBox="0 0 300 50" fill="none">
+                                <path d="M0,45 L50,42 L100,40 L150,15 L200,8 L250,5 L300,1" stroke="currentColor" stroke-width="3" fill="none"/>
+                                <circle cx="300" cy="1" r="4" fill="#f472b6"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gamified Feature: The Performance Marketer's Snake Game -->
+    <section id="game" class="py-20 bg-darkBg relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-sakuraPink/20 text-sakuraPink uppercase tracking-widest mb-2">Interactive Gamification</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white">The Performance Marketer's Snake</h2>
+                <p class="text-gray-400 text-sm mt-2">Grow your campaign budget by collecting high-value performance growth elements while avoiding fatal ad account bans and campaign mistakes!</p>
+            </div>
+
+            <!-- Game Container -->
+            <div class="glass-card p-6 rounded-3xl border border-cardBorder shadow-2xl relative">
+                
+                <!-- Game Header Dashboard -->
+                <div class="flex flex-wrap items-center justify-between gap-4 mb-4 pb-4 border-b border-cardBorder text-sm">
+                    <div class="flex items-center gap-6">
+                        <div>
+                            <span class="text-gray-400 text-xs block">Generated Revenue</span>
+                            <span id="game-score" class="text-2xl font-black text-neonMint">₹0.0 Lakhs</span>
+                        </div>
+                        <div>
+                            <span class="text-gray-400 text-xs block">Current ROAS</span>
+                            <span id="game-roas" class="text-xl font-bold text-glowingCyan">1.0x</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <button id="start-btn" onclick="startGame()" class="px-5 py-2.5 rounded-xl bg-neonMint text-darkBg font-bold text-xs uppercase tracking-wider hover:bg-emerald-400 transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-play"></i> Start Campaign
+                        </button>
+                        <button onclick="resetGame()" class="px-4 py-2.5 rounded-xl bg-cardBorder text-gray-300 font-semibold text-xs hover:text-white transition-all">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Canvas Screen -->
+                <div class="relative w-full overflow-hidden rounded-2xl bg-darkBg border border-gray-800 flex items-center justify-center" style="min-height: 380px;">
+                    <canvas id="snakeCanvas" width="600" height="380" class="w-full max-w-full h-auto block"></canvas>
+
+                    <!-- Game Overlay Modal -->
+                    <div id="game-overlay" class="absolute inset-0 bg-darkBg/90 backdrop-blur-md flex flex-col items-center justify-center p-6 text-center">
+                        <div class="w-16 h-16 rounded-full bg-neonMint/20 text-neonMint flex items-center justify-center text-3xl mb-4 animate-bounce">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-2">Ready to Scale Campaigns?</h3>
+                        <p class="text-gray-400 text-xs max-w-md mb-6 leading-relaxed">
+                            Use <strong>Arrow Keys</strong> or <strong>On-Screen Touch Buttons</strong> to steer. Eat green performance boosts (+CTR, +ROAS, +Pixel). Avoid red obstacles (Ad Account Ban, 20% GST Penalty).
+                        </p>
+                        <button onclick="startGame()" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-neonMint to-glowingCyan text-darkBg font-black text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-neonMint/30 transition-all">
+                            Launch Growth Campaign
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Legend & Touch Controls -->
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    <div class="bg-darkBg/50 p-3 rounded-xl border border-cardBorder">
+                        <span class="text-gray-300 font-bold block mb-1">Growth Boosts (+ Revenue):</span>
+                        <div class="flex flex-wrap gap-2 text-[11px] text-gray-400">
+                            <span class="text-neonMint"><i class="fa-solid fa-circle"></i> +Meta ROAS</span>
+                            <span class="text-glowingCyan"><i class="fa-solid fa-circle"></i> +Google CTR</span>
+                            <span class="text-sakuraPink"><i class="fa-solid fa-circle"></i> +CRO Audit</span>
+                        </div>
+                    </div>
+                    <div class="bg-darkBg/50 p-3 rounded-xl border border-cardBorder">
+                        <span class="text-gray-300 font-bold block mb-1">Fatal Errors (Game Over):</span>
+                        <div class="flex flex-wrap gap-2 text-[11px] text-gray-400">
+                            <span class="text-red-400"><i class="fa-solid fa-triangle-exclamation"></i> Ad Account Ban</span>
+                            <span class="text-red-400"><i class="fa-solid fa-triangle-exclamation"></i> Pixel Disconnect</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Touch Direction Controls -->
+                <div class="md:hidden grid grid-cols-3 gap-2 max-w-xs mx-auto mt-6">
+                    <div></div>
+                    <button onclick="changeDirection('UP')" class="p-3 bg-cardBorder text-white rounded-xl text-center active:bg-neonMint active:text-darkBg"><i class="fa-solid fa-chevron-up"></i></button>
+                    <div></div>
+                    <button onclick="changeDirection('LEFT')" class="p-3 bg-cardBorder text-white rounded-xl text-center active:bg-neonMint active:text-darkBg"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button onclick="changeDirection('DOWN')" class="p-3 bg-cardBorder text-white rounded-xl text-center active:bg-neonMint active:text-darkBg"><i class="fa-solid fa-chevron-down"></i></button>
+                    <button onclick="changeDirection('RIGHT')" class="p-3 bg-cardBorder text-white rounded-xl text-center active:bg-neonMint active:text-darkBg"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Stack & Skill Matrix -->
+    <section id="skills" class="py-20 border-t border-cardBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-glowingCyan text-xs font-bold uppercase tracking-widest">Tech & Tooling</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Growth Marketing Stack</h2>
+                <p class="text-gray-400 text-sm mt-2">Hands-on experience with modern ad platforms, attribution suites, funnel builders, and AI creative tools.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Stack 1 -->
+                <div class="glass-card p-6 rounded-2xl border border-cardBorder">
+                    <div class="text-neonMint text-2xl mb-4"><i class="fa-solid fa-rectangle-ad"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-3">Paid Media Channels</h3>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li class="flex items-center justify-between">
+                            <span>Meta Ads Manager</span>
+                            <span class="text-neonMint font-semibold">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>Google Ads (Search/PMax)</span>
+                            <span class="text-neonMint font-semibold">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>LinkedIn Campaign Mgr</span>
+                            <span class="text-gray-400">Advanced</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>YouTube & Shopping Ads</span>
+                            <span class="text-neonMint font-semibold">Expert</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Stack 2 -->
+                <div class="glass-card p-6 rounded-2xl border border-cardBorder">
+                    <div class="text-glowingCyan text-2xl mb-4"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-3">Analytics & CRO</h3>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li class="flex items-center justify-between">
+                            <span>Google Analytics 4 (GA4)</span>
+                            <span class="text-glowingCyan font-semibold">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>Google Tag Manager (GTM)</span>
+                            <span class="text-glowingCyan font-semibold">Advanced</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>Microsoft Clarity / Hotjar</span>
+                            <span class="text-glowingCyan font-semibold">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>Mixpanel / Triple Whale</span>
+                            <span class="text-gray-400">Intermediate</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Stack 3 -->
+                <div class="glass-card p-6 rounded-2xl border border-cardBorder">
+                    <div class="text-hotPink text-2xl mb-4"><i class="fa-solid fa-filter"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-3">Funnels & CRM</h3>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li class="flex items-center justify-between">
+                            <span>Shopify & Webflow CRO</span>
+                            <span class="text-hotPink font-semibold">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>HubSpot CRM</span>
+                            <span class="text-gray-400">Advanced</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>Klaviyo / WhatsApp Automation</span>
+                            <span class="text-hotPink font-semibold">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>Unbounce Landing Pages</span>
+                            <span class="text-hotPink font-semibold">Expert</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Stack 4 -->
+                <div class="glass-card p-6 rounded-2xl border border-cardBorder">
+                    <div class="text-sakuraPink text-2xl mb-4"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-3">AI & Ad Creatives</h3>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li class="flex items-center justify-between">
+                            <span>Midjourney / Canva Pro</span>
+                            <span class="text-sakuraPink font-semibold">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>ChatGPT Ad Copy Prompting</span>
+                            <span class="text-sakuraPink font-semibold">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>CapCut UGC Video Editing</span>
+                            <span class="text-sakuraPink font-semibold">Advanced</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>A/B Creative Frameworks</span>
+                            <span class="text-sakuraPink font-semibold">Expert</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline (Delhi & Bangalore Agency Focus) -->
+    <section id="experience" class="py-20 bg-cardBg/20 border-t border-cardBorder">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-neonMint text-xs font-bold uppercase tracking-widest">Career Journey</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Agency & Growth Experience</h2>
+                <p class="text-gray-400 text-sm mt-2">Proven track record managing growth accounts for top digital agencies across Delhi NCR and Bangalore.</p>
+            </div>
+
+            <!-- Timeline Stack -->
+            <div class="relative border-l-2 border-cardBorder ml-4 md:ml-32 space-y-12">
+                
+                <!-- Role 1 -->
+                <div class="relative pl-8">
+                    <!-- Timeline Node -->
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-neonMint border-4 border-darkBg"></div>
+                    
+                    <div class="md:absolute md:-left-36 md:top-1 text-xs font-bold text-neonMint uppercase tracking-wider mb-2 md:mb-0">
+                        2024 - Present
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-cardBorder">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <h3 class="text-xl font-bold text-white">Senior Performance Marketing Specialist</h3>
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold bg-neonMint/10 text-neonMint border border-neonMint/30">Bangalore (HSR Layout)</span>
+                        </div>
+                        <div class="text-xs text-gray-400 mb-4 font-medium">HyperGrowth Digital Agency • Client Portfolio: 8 D2C & B2B Brands</div>
+                        
+                        <ul class="space-y-2 text-xs text-gray-300 list-disc list-inside leading-relaxed">
+                            <li>Managed over <strong class="text-white">₹1.8 Crore in total ad spend</strong> across Meta & Google Ads with an average blended ROAS of 4.2x.</li>
+                            <li>Scaled a D2C fashion brand's monthly revenue from ₹8 Lakhs to ₹45 Lakhs within 5 months through structured creative testing.</li>
+                            <li>Led a team of 3 media buyers and creative strategists to execute weekly ad iteration cycles.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="relative pl-8">
+                    <!-- Timeline Node -->
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-glowingCyan border-4 border-darkBg"></div>
+                    
+                    <div class="md:absolute md:-left-36 md:top-1 text-xs font-bold text-glowingCyan uppercase tracking-wider mb-2 md:mb-0">
+                        2022 - 2024
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-cardBorder">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <h3 class="text-xl font-bold text-white">Growth & Paid Media Executive</h3>
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold bg-glowingCyan/10 text-glowingCyan border border-glowingCyan/30">Delhi NCR (Gurugram Cyber City)</span>
+                        </div>
+                        <div class="text-xs text-gray-400 mb-4 font-medium">Elevate Media Network • Performance Marketing Team</div>
+                        
+                        <ul class="space-y-2 text-xs text-gray-300 list-disc list-inside leading-relaxed">
+                            <li>Handled high-intent Google Search & Shopping campaigns for national e-commerce clients.</li>
+                            <li>Reduced Customer Acquisition Cost (CAC) by <strong class="text-white">35% average</strong> across 4 core accounts using landing page CRO audits.</li>
+                            <li>Implemented GA4 custom conversions and GTM server-side tracking to resolve iOS 14+ attribution issues.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Interactive Ad Budget & ROI Simulator -->
+    <section id="calculator" class="py-20 border-t border-cardBorder">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card p-8 rounded-3xl border border-cardBorder shadow-2xl">
+                <div class="text-center max-w-xl mx-auto mb-8">
+                    <span class="text-sakuraPink text-xs font-bold uppercase tracking-widest">Recruiter Tool</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Interactive Campaign ROI Simulator</h2>
+                    <p class="text-gray-400 text-xs mt-2">Test potential revenue returns and order volumes based on your monthly ad budget and target ROAS.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- Controls -->
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between text-xs font-bold text-gray-300 mb-2">
+                                <span>Monthly Ad Budget (₹)</span>
+                                <span id="budget-value" class="text-neonMint font-extrabold text-sm">₹5,000,000</span>
+                            </div>
+                            <input type="range" id="budget-range" min="100000" max="2000000" step="50000" value="500000" oninput="calculateROI()" class="w-full accent-neonMint bg-cardBorder rounded-lg cursor-pointer">
+                            <div class="flex justify-between text-[10px] text-gray-500 mt-1">
+                                <span>₹1 Lakh</span>
+                                <span>₹20 Lakhs</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-bold text-gray-300 mb-2">
+                                <span>Target Blended ROAS</span>
+                                <span id="roas-value" class="text-glowingCyan font-extrabold text-sm">4.0x</span>
+                            </div>
+                            <input type="range" id="roas-range" min="2.0" max="7.0" step="0.2" value="4.0" oninput="calculateROI()" class="w-full accent-glowingCyan bg-cardBorder rounded-lg cursor-pointer">
+                            <div class="flex justify-between text-[10px] text-gray-500 mt-1">
+                                <span>2.0x</span>
+                                <span>7.0x</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-bold text-gray-300 mb-2">
+                                <span>Avg Order Value (AOV ₹)</span>
+                                <span id="aov-value" class="text-sakuraPink font-extrabold text-sm">₹1,800</span>
+                            </div>
+                            <input type="range" id="aov-range" min="500" max="5000" step="100" value="1800" oninput="calculateROI()" class="w-full accent-sakuraPink bg-cardBorder rounded-lg cursor-pointer">
+                        </div>
+                    </div>
+
+                    <!-- Output Card -->
+                    <div class="bg-darkBg/80 p-6 rounded-2xl border border-cardBorder text-center space-y-4">
+                        <div>
+                            <span class="text-gray-400 text-xs block uppercase font-semibold">Estimated Monthly Revenue</span>
+                            <span id="sim-revenue" class="text-3xl font-black text-neonMint">₹20.0 Lakhs</span>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3 pt-3 border-t border-cardBorder">
+                            <div>
+                                <span class="text-gray-400 text-[10px] block uppercase">Est. Monthly Orders</span>
+                                <span id="sim-orders" class="text-base font-bold text-white">1,111</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-400 text-[10px] block uppercase">Net Generated Profit</span>
+                                <span id="sim-profit" class="text-base font-bold text-glowingCyan">₹15.0 Lakhs</span>
+                            </div>
+                        </div>
+
+                        <button onclick="openHRDrawer()" class="w-full py-3 rounded-xl bg-neonMint/10 border border-neonMint/30 text-neonMint font-bold text-xs uppercase tracking-wider hover:bg-neonMint hover:text-darkBg transition-all">
+                            Hire Me To Build This Engine
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HR Snapshot Modal / Drawer -->
+    <div id="hr-drawer" class="fixed inset-0 z-50 bg-darkBg/80 backdrop-blur-md hidden transition-opacity flex items-center justify-center p-4">
+        <div class="glass-card max-w-xl w-full rounded-3xl border border-cardBorder p-6 sm:p-8 relative shadow-2xl">
+            <button onclick="closeHRDrawer()" class="absolute top-6 right-6 text-gray-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-full bg-neonMint/20 text-neonMint flex items-center justify-center text-lg font-bold">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white">HR & Recruiter Fast Pitch</h3>
+                    <p class="text-xs text-gray-400">Quick facts for hiring managers in Delhi & Bangalore</p>
+                </div>
+            </div>
+
+            <div class="space-y-4 text-xs">
+                <div class="grid grid-cols-2 gap-3 bg-darkBg/60 p-4 rounded-xl border border-cardBorder">
+                    <div>
+                        <span class="text-gray-400 block mb-1">Notice Period</span>
+                        <span class="text-white font-bold text-sm">15 Days (Immediate Joiner)</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400 block mb-1">Preferred Locations</span>
+                        <span class="text-neonMint font-bold text-sm">Delhi NCR / Bangalore</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400 block mb-1">Target Roles</span>
+                        <span class="text-white font-bold text-sm">Lead Performance Marketer / Growth Mgr</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400 block mb-1">Work Preference</span>
+                        <span class="text-glowingCyan font-bold text-sm">On-Site / Hybrid</span>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <span class="text-gray-300 font-bold block">Why Hire Me for Your Agency?</span>
+                    <p class="text-gray-400 leading-relaxed">
+                        I combine analytical rigor with rapid creative testing to deliver predictable ROAS for client portfolios. Proven capability in scaling ad spend without sacrificing profit margins.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-cardBorder flex flex-col sm:flex-row items-center gap-3">
+                    <a href="https://wa.me/919876543210?text=Hi,%20I%20reviewed%20your%20Performance%20Marketing%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity." target="_blank" class="w-full sm:w-1/2 py-3 rounded-xl bg-neonMint text-darkBg font-bold text-center text-xs uppercase tracking-wider hover:bg-emerald-400 transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i> Direct WhatsApp HR
+                    </a>
+                    <a href="#contact" onclick="closeHRDrawer()" class="w-full sm:w-1/2 py-3 rounded-xl bg-cardBorder text-white font-bold text-center text-xs uppercase tracking-wider hover:border-neonMint border border-gray-700 transition-all">
+                        Book Strategy Call
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact & Strategy Booking Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-neonMint text-xs font-bold uppercase tracking-widest">Get In Touch</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1 mb-4">Let's Discuss Growth Opportunities</h2>
+            <p class="text-gray-400 text-sm max-w-xl mx-auto mb-10">
+                Currently open to Lead Performance Marketing and Growth Manager positions at top digital agencies and high-growth brands in Delhi NCR or Bangalore.
+            </p>
+
+            <div class="glass-card p-8 rounded-3xl border border-cardBorder text-left">
+                <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 mb-1">Your Name / Agency</label>
+                            <input type="text" required placeholder="e.g. Rahul Sharma (GroupM / Dentsu)" class="w-full px-4 py-3 rounded-xl bg-darkBg border border-cardBorder text-white text-xs focus:border-neonMint outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 mb-1">Work Email</label>
+                            <input type="email" required placeholder="rahul@agency.com" class="w-full px-4 py-3 rounded-xl bg-darkBg border border-cardBorder text-white text-xs focus:border-neonMint outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-300 mb-1">Target Location</label>
+                        <select class="w-full px-4 py-3 rounded-xl bg-darkBg border border-cardBorder text-white text-xs focus:border-neonMint outline-none">
+                            <option>Delhi NCR (Gurugram / Noida / Delhi)</option>
+                            <option>Bangalore (HSR / Koramangala / Indiranagar)</option>
+                            <option>Remote / Hybrid</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-300 mb-1">Message / Job Role Details</label>
+                        <textarea rows="4" required placeholder="Let us know about your client portfolio or hiring requirements..." class="w-full px-4 py-3 rounded-xl bg-darkBg border border-cardBorder text-white text-xs focus:border-neonMint outline-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-neonMint to-glowingCyan text-darkBg font-black text-xs uppercase tracking-wider hover:shadow-lg hover:shadow-neonMint/20 transition-all">
+                        Send Message & Schedule Interview
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-cardBorder text-center text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© 2026 Growth & Performance Marketing Portfolio. Built for Delhi NCR & Bangalore HRs.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // -------------------------------------------------------------
+        // 1. Interactive Sakura (Cherry Blossom) Petals Canvas Animation
+        // -------------------------------------------------------------
+        const canvas = document.getElementById('sakura-canvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const petals = [];
+        const petalCount = 35;
+
+        class Petal {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height - canvas.height;
+                this.size = Math.random() * 8 + 6;
+                this.speedY = Math.random() * 1.5 + 0.8;
+                this.speedX = Math.random() * 1 - 0.5;
+                this.opacity = Math.random() * 0.6 + 0.3;
+                this.rotation = Math.random() * 360;
+                this.rotationSpeed = Math.random() * 2 - 1;
+            }
+
+            update() {
+                this.y += this.speedY;
+                this.x += Math.sin(this.y * 0.01) + this.speedX;
+                this.rotation += this.rotationSpeed;
+
+                if (this.y > canvas.height) {
+                    this.y = -20;
+                    this.x = Math.random() * canvas.width;
+                }
+            }
+
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate((this.rotation * Math.PI) / 180);
+                ctx.globalAlpha = this.opacity;
+                
+                // Soft Sakura Pink Petal Shape
+                ctx.beginPath();
+                ctx.fillStyle = '#f472b6';
+                ctx.ellipse(0, 0, this.size, this.size / 2, 0, 0, 2 * Math.PI);
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        for (let i = 0; i < petalCount; i++) {
+            petals.push(new Petal());
+        }
+
+        function animateSakura() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            petals.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateSakura);
+        }
+        animateSakura();
+
+        // -------------------------------------------------------------
+        // 2. The Performance Marketer's Snake Game Logic
+        // -------------------------------------------------------------
+        const sCanvas = document.getElementById('snakeCanvas');
+        const sCtx = sCanvas.getContext('2d');
+        const gridSize = 20;
+        let snake = [{ x: 160, y: 200 }, { x: 140, y: 200 }, { x: 120, y: 200 }];
+        let dx = gridSize;
+        let dy = 0;
+        let score = 0;
+        let roas = 1.0;
+        let gameInterval = null;
+        let isRunning = false;
+
+        // Food & Obstacle Types
+        let food = { x: 0, y: 0, type: 'ROAS', color: '#10b981' };
+        let obstacle = { x: 0, y: 0, type: 'BAN', color: '#ef4444' };
+
+        function generateFood() {
+            food.x = Math.floor(Math.random() * (sCanvas.width / gridSize)) * gridSize;
+            food.y = Math.floor(Math.random() * (sCanvas.height / gridSize)) * gridSize;
+        }
+
+        function generateObstacle() {
+            obstacle.x = Math.floor(Math.random() * (sCanvas.width / gridSize)) * gridSize;
+            obstacle.y = Math.floor(Math.random() * (sCanvas.height / gridSize)) * gridSize;
+        }
+
+        function startGame() {
+            document.getElementById('game-overlay').classList.add('hidden');
+            if (isRunning) return;
+            snake = [{ x: 160, y: 200 }, { x: 140, y: 200 }, { x: 120, y: 200 }];
+            dx = gridSize;
+            dy = 0;
+            score = 0;
+            roas = 1.0;
+            updateDashboard();
+            generateFood();
+            generateObstacle();
+            isRunning = true;
+            gameInterval = setInterval(gameLoop, 120);
+        }
+
+        function resetGame() {
+            clearInterval(gameInterval);
+            isRunning = false;
+            document.getElementById('game-overlay').classList.remove('hidden');
+        }
+
+        function gameLoop() {
+            moveSnake();
+            if (checkCollision()) {
+                gameOver();
+                return;
+            }
+            drawGame();
+        }
+
+        function moveSnake() {
+            const head = { x: snake[0].x + dx, y: snake[0].y + dy };
+            snake.unshift(head);
+
+            // Eat Food
+            if (head.x === food.x && head.y === food.y) {
+                score += 2.5;
+                roas += 0.3;
+                updateDashboard();
+                generateFood();
+                generateObstacle();
+            } else {
+                snake.pop();
+            }
+        }
+
+        function checkCollision() {
+            const head = snake[0];
+            // Wall Collision
+            if (head.x < 0 || head.x >= sCanvas.width || head.y < 0 || head.y >= sCanvas.height) {
+                return true;
+            }
+            // Self Collision
+            for (let i = 1; i < snake.length; i++) {
+                if (head.x === snake[i].x && head.y === snake[i].y) return true;
+            }
+            // Obstacle Collision
+            if (head.x === obstacle.x && head.y === obstacle.y) {
+                return true;
+            }
+            return false;
+        }
+
+        function drawGame() {
+            // Clear Canvas
+            sCtx.fillStyle = '#0d0f17';
+            sCtx.fillRect(0, 0, sCanvas.width, sCanvas.height);
+
+            // Draw Snake
+            snake.forEach((part, index) => {
+                sCtx.fillStyle = index === 0 ? '#10b981' : '#06b6d4';
+                sCtx.beginPath();
+                sCtx.roundRect(part.x + 1, part.y + 1, gridSize - 2, gridSize - 2, 4);
+                sCtx.fill();
+            });
+
+            // Draw Food
+            sCtx.fillStyle = '#10b981';
+            sCtx.beginPath();
+            sCtx.arc(food.x + gridSize / 2, food.y + gridSize / 2, gridSize / 2 - 2, 0, Math.PI * 2);
+            sCtx.fill();
+
+            // Draw Obstacle
+            sCtx.fillStyle = '#ef4444';
+            sCtx.fillRect(obstacle.x + 2, obstacle.y + 2, gridSize - 4, gridSize - 4);
+        }
+
+        function updateDashboard() {
+            document.getElementById('game-score').innerText = `₹${score.toFixed(1)} Lakhs`;
+            document.getElementById('game-roas').innerText = `${roas.toFixed(1)}x`;
+        }
+
+        function gameOver() {
+            clearInterval(gameInterval);
+            isRunning = false;
+            let rank = "Growth Marketer";
+            if (score > 10) rank = "Meta Ads Wizard";
+            if (score > 20) rank = "Head of Performance Growth";
+
+            alert(`Campaign Ended! Total Revenue Scaled: ₹${score.toFixed(1)} Lakhs. Rank: ${rank}`);
+            resetGame();
+        }
+
+        function changeDirection(dir) {
+            if (dir === 'UP' && dy === 0) { dx = 0; dy = -gridSize; }
+            if (dir === 'DOWN' && dy === 0) { dx = 0; dy = gridSize; }
+            if (dir === 'LEFT' && dx === 0) { dx = -gridSize; dy = 0; }
+            if (dir === 'RIGHT' && dx === 0) { dx = gridSize; dy = 0; }
+        }
+
+        window.addEventListener('keydown', e => {
+            if (e.key === 'ArrowUp') changeDirection('UP');
+            if (e.key === 'ArrowDown') changeDirection('DOWN');
+            if (e.key === 'ArrowLeft') changeDirection('LEFT');
+            if (e.key === 'ArrowRight') changeDirection('RIGHT');
+        });
+
+        // -------------------------------------------------------------
+        // 3. ROI Simulator Calculator Logic
+        // -------------------------------------------------------------
+        function calculateROI() {
+            const budget = parseFloat(document.getElementById('budget-range').value);
+            const roas = parseFloat(document.getElementById('roas-range').value);
+            const aov = parseFloat(document.getElementById('aov-range').value);
+
+            document.getElementById('budget-value').innerText = `₹${(budget).toLocaleString('en-IN')}`;
+            document.getElementById('roas-value').innerText = `${roas.toFixed(1)}x`;
+            document.getElementById('aov-value').innerText = `₹${(aov).toLocaleString('en-IN')}`;
+
+            const revenue = budget * roas;
+            const orders = Math.round(revenue / aov);
+            const profit = revenue - budget;
+
+            document.getElementById('sim-revenue').innerText = `₹${(revenue / 100000).toFixed(1)} Lakhs`;
+            document.getElementById('sim-orders').innerText = orders.toLocaleString('en-IN');
+            document.getElementById('sim-profit').innerText = `₹${(profit / 100000).toFixed(1)} Lakhs`;
+        }
+        calculateROI();
+
+        // -------------------------------------------------------------
+        // 4. HR Drawer Controls
+        // -------------------------------------------------------------
+        function openHRDrawer() {
+            document.getElementById('hr-drawer').classList.remove('hidden');
+        }
+
+        function closeHRDrawer() {
+            document.getElementById('hr-drawer').classList.add('hidden');
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            alert("Thank you! Message sent successfully. I will get back to you within 24 hours.");
+        }
+    </script>
+</body>
+</html>
